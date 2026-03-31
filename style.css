@@ -1,0 +1,86 @@
+/* style.css */
+:root {
+    --primary: #6366f1;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --accent: #10b981;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    color: var(--dark);
+    min-height: 100vh;
+}
+
+header {
+    background: white;
+    padding: 1rem 5%;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logo span { color: var(--primary); }
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.intro { text-align: center; margin-bottom: 40px; }
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+.icon { font-size: 3rem; margin-bottom: 15px; }
+
+.solution-card {
+    background: white;
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 20px;
+    border-left: 8px solid var(--primary);
+    animation: fadeIn 0.5s ease;
+}
+
+.hidden { display: none; }
+
+.btn-close {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--dark);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
