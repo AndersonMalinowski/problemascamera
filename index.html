@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamFix | Soluções Inteligentes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header>
+        <nav>
+            <div class="logo">Cam<span>Fix</span></div>
+            <p>Sua câmera em alta performance</p>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h1>Como podemos ajudar hoje?</h1>
+            <p>Selecione o problema que você está enfrentando para obter uma solução imediata.</p>
+        </section>
+
+        <div class="card-grid">
+            <div class="card" onclick="showSolution('quality')">
+                <div class="icon">📷</div>
+                <h3>Qualidade de Imagem</h3>
+                <p>Imagem embaçada, granulada ou com cores lavadas.</p>
+            </div>
+
+            <div class="card" onclick="showSolution('audio')">
+                <div class="icon">🎙️</div>
+                <h3>Áudio e Sincronia</h3>
+                <p>Atraso na voz ou ruídos excessivos no microfone.</p>
+            </div>
+        </div>
+
+        <div id="solution-area" class="solution-card hidden">
+            <h2 id="solution-title"></h2>
+            <div id="solution-content"></div>
+            <button onclick="closeSolution()" class="btn-close">Fechar Solução</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
