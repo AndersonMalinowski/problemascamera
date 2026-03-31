@@ -3,46 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CamFix | Soluções Inteligentes</title>
+    <title>CamFix Pro | Suporte e Instalação</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">Cam<span>Fix</span></div>
-            <p>Sua câmera em alta performance</p>
-        </nav>
-    </header>
+<header class="hero">
+    <div class="overlay">
+        <h1>Mestres da Visão e Som</h1>
+        <p>Guia definitivo para instalação, qualidade e armazenamento de mídia.</p>
+    </div>
+</header>
 
-    <main class="container">
-        <section class="intro">
-            <h1>Como podemos ajudar hoje?</h1>
-            <p>Selecione o problema que você está enfrentando para obter uma solução imediata.</p>
-        </section>
+<main class="container">
+    
+    <section class="info-section">
+        <div class="text-content">
+            <h2>Instalação de Hardware e Software</h2>
+            <p>A base de uma boa imagem começa na fixação física. Certifique-se de que a câmera esteja instalada em uma superfície livre de vibrações, pois micro-movimentos degradam a nitidez. No Windows ou Mac, sempre instale o software proprietário do fabricante em vez de confiar apenas nos drivers genéricos "Plug & Play". Isso libera o controle de exposição manual e balanço de branco.</p>
+            <p><strong>Dica Pro:</strong> Utilize cabos USB 3.0 ou superiores para evitar gargalos de dados que causam o travamento da imagem.</p>
+        </div>
+        <div class="image-content">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80" alt="Câmera Profissional">
+        </div>
+    </section>
 
-        <div class="card-grid">
-            <div class="card" onclick="showSolution('quality')">
-                <div class="icon">📷</div>
-                <h3>Qualidade de Imagem</h3>
-                <p>Imagem embaçada, granulada ou com cores lavadas.</p>
+    <section class="info-section reverse">
+        <div class="text-content">
+            <h2>Otimização de Áudio e Vídeo</h2>
+            <p>Para uma qualidade cristalina, a iluminação deve ser o seu foco. O ruído visual (aqueles pontos granulados) ocorre quando o sensor tenta compensar a falta de luz. Use o método de três pontos de luz. Quanto ao áudio, o segredo é o isolamento acústico e o posicionamento do microfone (cerca de 15cm da boca).</p>
+        </div>
+        <div class="image-content">
+            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80" alt="Microfone e Estúdio">
+        </div>
+    </section>
+
+    <section class="storage-box">
+        <h2>Modos de Salvamento e Backup</h2>
+        <div class="storage-grid">
+            <div class="storage-item">
+                <h3>Cloud (Nuvem)</h3>
+                <p>Ideal para segurança. Salvar em servidores remotos garante que, mesmo que o hardware seja danificado, os dados de áudio e vídeo estejam protegidos com criptografia de ponta a ponta.</p>
             </div>
-
-            <div class="card" onclick="showSolution('audio')">
-                <div class="icon">🎙️</div>
-                <h3>Áudio e Sincronia</h3>
-                <p>Atraso na voz ou ruídos excessivos no microfone.</p>
+            <div class="storage-item">
+                <h3>Local (SSD/NAS)</h3>
+                <p>Para alta fidelidade e edição, o salvamento local é imbatível. Recomendamos o uso de codecs como H.264 ou HEVC para manter a qualidade máxima com arquivos de tamanho otimizado.</p>
             </div>
         </div>
+    </section>
 
-        <div id="solution-area" class="solution-card hidden">
-            <h2 id="solution-title"></h2>
-            <div id="solution-content"></div>
-            <button onclick="closeSolution()" class="btn-close">Fechar Solução</button>
-        </div>
-    </main>
+</main>
 
-    <script src="script.js"></script>
+<footer>
+    <p>&copy; 2026 CamFix Tech - Soluções Audiovisuais</p>
+</footer>
+
 </body>
 </html>
