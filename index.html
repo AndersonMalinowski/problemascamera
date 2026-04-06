@@ -13,7 +13,12 @@
 
 <nav class="navbar">
     <div class="logo">SAFE<span>VISION</span></div>
-    <div class="status-badge">● Sistema Online</div>
+    
+    <div class="nav-buttons">
+        <button class="btn-login" id="btnLogin">Entrar</button>
+        <button class="btn-register" id="btnRegister">Criar Conta</button>
+        <div class="status-badge">● Sistema Online</div>
+    </div>
 </nav>
 
 <header class="hero">
@@ -24,7 +29,8 @@
 </header>
 
 <main class="container">
-    
+
+    <!-- Seção 1 -->
     <section class="glass-card section-grid">
         <div class="text">
             <span class="tag">Engenharia</span>
@@ -41,17 +47,52 @@
         </div>
     </section>
 
+    <!-- Seção 2 - Ampliada -->
     <section class="glass-card section-grid reverse">
         <div class="text">
             <span class="tag">Qualidade</span>
-            <h2>Nitidez e Captura de Áudio</h2>
-            <p>Para identificação facial precisa, configuramos o WDR (Wide Dynamic Range) para equilibrar sombras e luzes intensas. No áudio, implementamos microfones bidirecionais com cancelamento de ruído ambiente, permitindo escuta nítida mesmo em locais movimentados.</p>
+            <h2>Nitidez e Captura de Áudio Profissional</h2>
+            <p>Para identificação facial precisa, configuramos o WDR (Wide Dynamic Range) e HDR avançado. Nossas câmeras suportam resolução até 8K com zoom óptico e foco automático.</p>
+            
+            <p><strong>Sistema de Áudio Bidirecional Premium:</strong></p>
+            <ul>
+                <li>Microfones com cancelamento ativo de ruído (até 40dB).</li>
+                <li>Áudio bidirecional com alto-falante integrado para comunicação em tempo real.</li>
+                <li>Detecção inteligente de sons suspeitos (vidro quebrando, gritos, tiros).</li>
+                <li>Gravação de áudio em alta fidelidade sincronizada com vídeo.</li>
+                <li>Suporte a áudio ambiente 360° em áreas internas.</li>
+            </ul>
         </div>
         <div class="image">
             <img src="https://images.unsplash.com/photo-1524143878510-e3b8d6312402?q=80&w=800" alt="Monitoramento Noturno">
         </div>
     </section>
 
+    <!-- Nova Seção - Tipos de Câmeras -->
+    <section class="glass-card">
+        <span class="tag">Tecnologia</span>
+        <h2>Nossas Câmeras e Tecnologias</h2>
+        <div class="grid-storage">
+            <div class="feature-card">
+                <h3>Câmeras Bullet 4K</h3>
+                <p>Visão noturna em cores com LED branco, alcance de 60 metros, proteção IP67 e detecção de movimento inteligente.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Câmeras Dome Anti-Vandalismo</h3>
+                <p>Resistentes a impactos, ideais para áreas de alto tráfego e estacionamentos.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Câmeras PTZ com IA</h3>
+                <p>Pan, Tilt e Zoom automático com rastreamento de pessoas e veículos.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Câmeras Térmicas</h3>
+                <p>Detecção de calor corporal e incêndios mesmo em total escuridão ou fumaça.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Armazenamento (mantida) -->
     <section class="storage-section">
         <div class="header-center">
             <h2>Gerenciamento de Dados e Salvamento</h2>
@@ -61,15 +102,15 @@
         <div class="grid-storage">
             <div class="feature-card">
                 <h3>Salvamento em NVR Local</h3>
-                <p>Gravação em discos rígidos WD Purple (específicos para vídeo). Otimizamos o codec para <strong>H.265+</strong>, que reduz o tamanho do arquivo em até 70% sem perder a definição 4K.</p>
+                <p>Gravação em discos rígidos WD Purple. Otimizamos o codec <strong>H.265+</strong>, reduzindo o tamanho em até 70% mantendo qualidade 4K/8K.</p>
             </div>
             <div class="feature-card">
                 <h3>Backup em Nuvem Híbrida</h3>
-                <p>Mesmo que o gravador seja roubado, as imagens críticas são enviadas instantaneamente para servidores criptografados, garantindo a prova digital do evento.</p>
+                <p>Envio automático e criptografado para nuvem. Mesmo se o equipamento for comprometido, as evidências ficam seguras.</p>
             </div>
             <div class="feature-card">
                 <h3>Gestão de Áudio Log</h3>
-                <p>Arquivos de áudio são indexados por data e hora, sincronizados perfeitamente com os frames de vídeo para fins de perícia e auditoria.</p>
+                <p>Áudio indexado por data/hora, sincronizado com vídeo para perícia judicial e auditoria.</p>
             </div>
         </div>
     </section>
@@ -80,5 +121,36 @@
     <p>&copy; 2026 SafeVision Analytics — Monitoramento Inteligente</p>
 </footer>
 
+<!-- Modal Login -->
+<div class="modal" id="modalLogin">
+    <div class="modal-content">
+        <h2>Entrar na Conta</h2>
+        <form id="loginForm">
+            <input type="email" placeholder="E-mail" required>
+            <input type="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem conta? <a href="#" id="linkRegister">Criar conta</a></p>
+        <button class="close-btn">Fechar</button>
+    </div>
+</div>
+
+<!-- Modal Cadastro -->
+<div class="modal" id="modalRegister">
+    <div class="modal-content">
+        <h2>Criar Nova Conta</h2>
+        <form id="registerForm">
+            <input type="text" placeholder="Nome completo" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="tel" placeholder="Telefone" required>
+            <input type="password" placeholder="Senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p>Já tem conta? <a href="#" id="linkLogin">Entrar</a></p>
+        <button class="close-btn">Fechar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
